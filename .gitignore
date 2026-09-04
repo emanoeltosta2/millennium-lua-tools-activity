@@ -1,0 +1,8 @@
+node_modules/
+/.npm-cache/
+/.millennium/
+/.publication-reference/
+/launcher/bin/
+/launcher/obj/
+/launcher/publish/
+/launcher/publish-*/
