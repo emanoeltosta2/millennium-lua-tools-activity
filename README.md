@@ -43,14 +43,7 @@ It is an independent project and is not affiliated with, endorsed by, or distrib
    ```text
    C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity
    ```
-
-   Do **not** copy anything a second time. Just check that the first copy placed `plugin.json` at this exact path:
-
-   ```text
-   C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity\plugin.json
-   ```
-
-   Windows may ask for administrator permission because Steam is installed under `Program Files`.
+   
 7. Start Steam, open Millennium settings, enable **Non-Steam Activity**, and restart Steam once more if Millennium requests it.
 8. Start a Lua Tools game normally from the Steam library or a Steam-created desktop shortcut. The profile should display the game as **In non-Steam game**.
 
