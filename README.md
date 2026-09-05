@@ -17,25 +17,50 @@ It is an independent project and is not affiliated with, endorsed by, or distrib
 ## Requirements
 
 - Windows 10 or newer (x64)
-- Millennium
-- Lua Tools
-- .NET 8 Runtime
+- [Millennium](https://docs.steambrew.app/users/getting-started/installation), installed in Steam and working
+- Lua Tools, with at least one game added to the Steam library
+- [.NET 8 Desktop Runtime (x64)](https://dotnet.microsoft.com/download/dotnet/8.0)
+- Node.js 20 or newer, only when installing manually from this repository
 
 ## Installation
 
-If it has been approved, install **Non-Steam Activity** from the Millennium plugin store and restart Steam. Enable the plugin in Millennium settings if it is not enabled automatically.
+### From the Millennium store
 
-Start a Lua Tools game normally from the Steam library. The plugin intercepts only the launch notification: Lua Tools remains responsible for starting the game, while the hidden helper publishes and monitors its Steam activity.
+If the plugin has been approved, install **Non-Steam Activity** from the Millennium plugin store, restart Steam, then enable it in Millennium settings if it is not enabled automatically.
 
-### Manual installation from this repository
+### Manual installation from GitHub
 
-If the plugin is not available in the Millennium store, clone or download this repository, build it as described below, and copy the resulting folder to Steam's Millennium plugin directory:
+Use these steps if the plugin is not yet in the Millennium store:
 
-```text
-C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity
-```
+1. Install Millennium first and open Steam once to confirm that Millennium's settings are available.
+2. Install Lua Tools and the .NET 8 Desktop Runtime listed above.
+3. On this GitHub page, select **Code → Download ZIP**, then extract the ZIP to a folder you can write to, such as your Desktop. You may also clone the repository with Git.
+4. Open PowerShell in the extracted project folder and run:
 
-Restart Steam and enable **Non-Steam Activity** in Millennium's plugin settings.
+   ```powershell
+   npm install
+   npm run build
+   ```
+
+   This creates `.millennium\Dist\index.js`, which Millennium needs for the plugin interface.
+5. Exit Steam completely, including from the system tray.
+6. Copy the **contents of the project folder** to the Millennium plugins directory. In the standard Windows installation tested by this project, the destination is:
+
+   ```text
+   C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity
+   ```
+
+   After copying, this file must exist exactly at:
+
+   ```text
+   C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity\plugin.json
+   ```
+
+   Windows may ask for administrator permission because Steam is installed under `Program Files`.
+7. Start Steam, open Millennium settings, enable **Non-Steam Activity**, and restart Steam once more if Millennium requests it.
+8. Start a Lua Tools game normally from the Steam library or a Steam-created desktop shortcut. The profile should display the game as **In non-Steam game**.
+
+The plugin does not replace or modify Lua Tools. Lua Tools remains responsible for launching the game; Non-Steam Activity only publishes and monitors the Steam presence.
 
 ## Building from source
 
