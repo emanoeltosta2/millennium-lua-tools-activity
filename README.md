@@ -38,13 +38,13 @@ It is an independent project and is not affiliated with, endorsed by, or distrib
 
    This creates `.millennium\Dist\index.js`, which Millennium needs for the plugin interface.
 5. Exit Steam completely, including from the system tray.
-6. Copy the **contents of the project folder** to the Millennium plugins directory. In the standard Windows installation tested by this project, the destination is:
+6. Copy the **contents of the project folder once** to the Millennium plugins directory. In the standard Windows installation tested by this project, create this destination folder if it does not exist:
 
    ```text
    C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity
    ```
 
-   After copying, this file must exist exactly at:
+   Do **not** copy anything a second time. Just check that the first copy placed `plugin.json` at this exact path:
 
    ```text
    C:\Program Files (x86)\Steam\millennium\plugins\non-steam-activity\plugin.json
