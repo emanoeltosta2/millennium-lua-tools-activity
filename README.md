@@ -46,6 +46,14 @@ The frontend output is written to `.millennium/Dist/index.js`. The public packag
 
 The plugin does not collect telemetry or send personal data to third-party services. It reads local Steam and Lua Tools files required to identify the installed game and its artwork.
 
+## Distribution and third-party components
+
+- This repository contains the complete source for the Millennium frontend and Lua backend, as well as the C# source for `LuaStatusMonitor.exe`.
+- The published executable is built from `launcher/Program.cs`. It requires the user-installed .NET 8 Runtime; no .NET runtime is redistributed with the plugin.
+- Lua Tools is a user-installed prerequisite. This plugin neither bundles, modifies, nor redistributes Lua Tools or game files.
+- The frontend uses Millennium's public `@steambrew` development packages. `@steambrew/client` is licensed under LGPL-2.1-only and `@steambrew/ttc` under MIT; their sources are available from the SteamClientHomebrew organization. The React type definitions used only during compilation are MIT-licensed.
+- No external paid service, account, telemetry endpoint, or network API is required to use the plugin.
+
 ## License
 
 MIT
