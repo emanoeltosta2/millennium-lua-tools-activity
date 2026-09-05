@@ -24,13 +24,7 @@ It is an independent project and is not affiliated with, endorsed by, or distrib
 
 ## Installation
 
-### From the Millennium store
-
-If the plugin has been approved, install **Non-Steam Activity** from the Millennium plugin store, restart Steam, then enable it in Millennium settings if it is not enabled automatically.
-
-### Manual installation from GitHub
-
-Use these steps if the plugin is not yet in the Millennium store:
+### Install from GitHub
 
 1. Install Millennium first and open Steam once to confirm that Millennium's settings are available.
 2. Install Lua Tools and the .NET 8 Desktop Runtime listed above.
