@@ -1,7 +1,7 @@
 {
   "name": "lua-tools-activity",
   "version": "0.4.8",
-  "description": "Millennium plugin that publishes Lua Tools games as Steam activity.",
+  "description": "Millennium plugin that publishes Lua games as Steam activity.",
   "type": "module",
   "main": "./frontend/index.tsx",
   "scripts": {

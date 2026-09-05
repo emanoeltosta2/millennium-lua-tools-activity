@@ -1,6 +1,6 @@
 # Third-party notices
 
-Lua Tools Activity is distributed under the MIT License; see `LICENSE`.
+Non-Steam Activity is distributed under the MIT License; see `LICENSE`.
 
 ## Millennium development packages
 
@@ -16,4 +16,4 @@ The plugin does not bundle the .NET runtime. `LuaStatusMonitor.exe` is built fro
 
 - `@types/react` and `@types/react-dom` — MIT, from DefinitelyTyped: https://github.com/DefinitelyTyped/DefinitelyTyped
 
-No Lua Tools binaries, game executables, assets, or copyrighted game content are included in this repository or the plugin package.
+No Lua binaries, game executables, assets, or copyrighted game content are included in this repository or the plugin package.

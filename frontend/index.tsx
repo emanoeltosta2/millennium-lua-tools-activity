@@ -459,12 +459,12 @@ function PluginContent() {
   const [status, setStatus] = useState('Preparando o monitor…');
   useEffect(() => {
     void refreshLuaToolsAppIds()
-      .then((count) => setStatus(`${count} jogos Lua Tools detectados. O lançamento original da Steam será preservado.`))
+      .then((count) => setStatus(`${count} jogos Lua detectados. O lançamento original da Steam será preservado.`))
       .catch((error) => setStatus(`Erro: ${error instanceof Error ? error.message : String(error)}`));
   }, []);
   return (
     <div style={{ padding: 16, display: 'flex', flexDirection: 'column', gap: 10 }}>
-      <div style={{ fontWeight: 600 }}>Lua Tools Activity</div>
+      <div style={{ fontWeight: 600 }}>Non-Steam Activity</div>
       <div style={{ opacity: 0.8, lineHeight: 1.4 }}>
         Mantém o lançamento original da Steam e usa um único monitor oculto para publicar o nome do jogo.
       </div>
@@ -474,5 +474,5 @@ function PluginContent() {
 }
 
 export default definePlugin(() => ({
-  title: 'Lua Tools Activity', icon: <span>LT</span>, content: <PluginContent />,
+  title: 'Non-Steam Activity', icon: <span>NS</span>, content: <PluginContent />,
 }));
